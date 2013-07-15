@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>KnockoutJS Test</title>
+    <link rel="stylesheet" href="css/screen.css" />
+</head>
+<body>
+	<section id='test-section'>
+		<h1>Summary</h1>
+	</section>
+	<script src='js/require.js' data-main="js/app"></script>
+	<script src='js/summary.js' data-main="js/app"></script>
+<h2>Items: <span data-bind="text: seats().length"></span></h2>
+	
+<table>
+    <tbody data-bind="foreach: seats">
+        <tr>
+            <td><strong ></strong></td>
+			<td>Item £<input data-bind="value: name"></td>
+			<td><a href="#" data-bind="click: $root.removeSeat">Remove</a></td>
+        </tr>    
+    </tbody>
+			<tr>
+		<td>Total:<strong data-bind="text: fullTotal"></strong></td>
+		</tr>
+
+</table>
+
+<button data-bind="click: addSeat">Add Item +</button>
+</body>
+</html>
